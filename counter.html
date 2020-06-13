@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Tally Counter
+        </title>
+        <Link rel='stylesheet' href='style.css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>></script>
+        <script>
+        var counter = 0;
+            //Add function
+            function addCount(){
+                document.getElementById("carrier").innerHTML = counter+=1;
+            }
+            //Subtract function
+            function minusCount(){
+                document.getElementById("carrier").innerHTML = counter-=1;
+            };
+            //Set input value as counter
+            function Set(){
+                set_value = document.getElementById("set").value
+                document.getElementById("carrier").innerHTML = set_value;
+                counter = Number(set_value)
+            }
+        </script>
+    </head>
+    <body>
+        <h1>
+            Counter
+        </h1>
+        <p id='carrier'> 0 </p>
+        <br>
+        <input type="number" id='set'>
+        <button onclick="Set()">Set</button>
+</br>
+<br>
+        <button onclick="addCount()">Add count</button>
+        <button onclick="minusCount()">Lower count</button>
+</br>
+    </body>
+</html>
